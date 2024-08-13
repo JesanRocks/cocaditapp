@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             {{-- <div class="col s12 m6 offset-m3"> --}}
-            <div class="card horizontal">
+            <div class="card horizontal light-green lighten-4">
                 <div class="card-image center valign-wrapper">
                     <div class="center-align"><img src="/img/icon.svg" alt="cocada logo" /></div>
                     {{-- <span class="card-title center-align">Iniciar Sesión</span> --}}
@@ -15,7 +15,11 @@
                     <div class="card-content">
                         {{-- <div class="center-align"><img src="/img/icon.svg" alt="cocada logo" width="30%" /></div>
                             <span class="card-title center-align">Iniciar Sesión</span> --}}
-                        <div class="center"><b>Iniciar Sesión</b></div>
+                        <div class="center">
+                            <i class="material-icons">nature_people</i><br>
+                            <b> Iniciar Sesión</b><br>
+                            <small> Funcionario</small>
+                        </div>
                         <form action="{{ route('contribuyente.login') }}" method="POST">
                             @csrf
 
