@@ -7,15 +7,18 @@
         <div class="row">
             {{-- <div class="col s12 m6 offset-m3"> --}}
             <div class="card horizontal light-blue lighten-4">
-                <div class="card-image center valign-wrapper">
+                
+                <div class="card-image center valign-wrapper hide-on-small-only show-on-medium-and-up">
                     <div class="center-align"><img src="/img/icon.svg" alt="cocada logo" /></div>
-                    {{-- <span class="card-title center-align">Iniciar Sesión</span> --}}
                 </div>
+
                 <div class="card-stacked">
                     <div class="card-content">
-                        {{-- <div class="center-align"><img src="/img/icon.svg" alt="cocada logo" width="30%" /></div>
-                        <span class="card-title center-align">Iniciar Sesión</span> --}}
-                        <div class="center">
+                        <div class="center-align show-on-small hide-on-med-and-up">
+                            <img src="/img/icon.svg" alt="cocada logo" width="30%" />
+                            <span class="card-title center-align">Iniciar Sesión</span>
+                        </div>
+                        <div class="center hide-on-small-only show-on-medium-and-up">
                             <i class="material-icons">supervisor_account</i><br>
                             <b> Iniciar Sesión</b><br> 
                             <small> Funcionario</small>

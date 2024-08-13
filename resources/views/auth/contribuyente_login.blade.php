@@ -7,18 +7,21 @@
         <div class="row">
             {{-- <div class="col s12 m6 offset-m3"> --}}
             <div class="card horizontal light-green lighten-4">
-                <div class="card-image center valign-wrapper">
+
+                <div class="card-image center valign-wrapper hide-on-small-only show-on-medium-and-up">
                     <div class="center-align"><img src="/img/icon.svg" alt="cocada logo" /></div>
-                    {{-- <span class="card-title center-align">Iniciar Sesión</span> --}}
                 </div>
+
                 <div class="card-stacked">
                     <div class="card-content">
-                        {{-- <div class="center-align"><img src="/img/icon.svg" alt="cocada logo" width="30%" /></div>
-                            <span class="card-title center-align">Iniciar Sesión</span> --}}
-                        <div class="center">
+                        <div class="center-align show-on-small hide-on-med-and-up">
+                            <img src="/img/icon.svg" alt="cocada logo" width="30%" />
+                            <span class="card-title center-align">Iniciar Sesión</span>
+                        </div>
+                        <div class="center hide-on-small-only show-on-medium-and-up">
                             <i class="material-icons">nature_people</i><br>
                             <b> Iniciar Sesión</b><br>
-                            <small> Funcionario</small>
+                            <small> Contribuyente</small>
                         </div>
                         <form action="{{ route('contribuyente.login') }}" method="POST">
                             @csrf
@@ -40,11 +43,12 @@
                                 </button>
                             </div>
                         </form>
+                        
+                        <p class="align-left">¿Todavía no te has registrado? <a href="{{ route('contribuyente.register') }}">Regístrate aquí</a>.</p>
                     </div>
+                    
                 </div>
-                {{-- <div class="card-action">
-                        <a href="#">This is a link</a>
-                    </div> --}}
+                
             </div>
             {{-- </div> --}}
         </div>
