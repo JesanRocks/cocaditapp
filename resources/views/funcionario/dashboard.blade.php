@@ -12,10 +12,18 @@
             <h5>Bienvenido al <b>Control Operativo de Cobros Administración de Deudas y Aportes</b></h5>
 
             <blockquote>
-                Estimado <b>Funcionario</b>, te damos la bienvenida a nuestro sistema de gestión tributaria en línea. 
-                Como funcionario responsable de la administración de la información de los contribuyentes, te ofrecemos una herramienta innovadora que te permitirá gestionar los datos tributarios de manera ágil y segura. 
-                Desde cualquier lugar, podrás supervisar y administrar las obligaciones fiscales sin complicaciones, aprovechando la tecnología para simplificar tu labor. 
-                Nuestro compromiso es brindarte un servicio eficiente y moderno.
+                Estimado <b>Funcionario, <i>{{Auth::user()->nombres}} {{Auth::user()->apellidos}}</i></b>.
+                <br><br>
+                ¡Bienvenido a nuestro innovador sistema de gestión tributaria en línea! Como pieza clave en la
+                administración de la información de los contribuyentes, te ofrecemos una herramienta avanzada diseñada para
+                facilitar y optimizar tu labor.
+                <br><br>
+                Desde cualquier lugar, podrás gestionar y supervisar los datos tributarios de manera rápida y segura,
+                aprovechando la tecnología de vanguardia para simplificar tus tareas. Nuestra plataforma está pensada para
+                hacer tu trabajo más ágil y eficiente, asegurando una experiencia fluida y sin complicaciones.
+                <br><br>
+                Nos enorgullece ofrecerte un servicio moderno y efectivo, alineado con los estándares más altos de calidad.
+                Estamos aquí para apoyarte en cada paso del camino.<br><br>
             </blockquote>
         </div>
     </div>

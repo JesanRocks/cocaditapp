@@ -4,11 +4,16 @@ return [
 
     'defaults' => [
         'guard' => 'web',
-        'passwords' => 'contribuyentes',
+        'passwords' => 'users',
     ],
 
     'guards' => [
         'web' => [
+            'driver' => 'session',
+            'provider' => 'users',
+        ],
+
+        'contribuyente' => [
             'driver' => 'session',
             'provider' => 'contribuyentes',
         ],
@@ -20,6 +25,12 @@ return [
     ],
 
     'providers' => [
+
+        'users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\User::class,
+        ],
+
         'contribuyentes' => [
             'driver' => 'eloquent',
             'model' => App\Models\Contribuyente::class,
@@ -32,6 +43,13 @@ return [
     ],
 
     'passwords' => [
+        'users' => [
+            'provider' => 'users',
+            'table' => 'password_reset_tokens',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        
         'contribuyentes' => [
             'provider' => 'contribuyentes',
             'table' => 'password_reset_tokens',

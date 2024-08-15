@@ -10,6 +10,11 @@ use App\Models\Contribuyente;
 
 class ContribuyenteAuthController extends Controller
 {
+    public function dashboard()
+    {
+        return view('contribuyente.dashboard');
+    }
+    
     public function showLoginForm()
     {
         return view('auth.contribuyente_login');
@@ -27,7 +32,7 @@ class ContribuyenteAuthController extends Controller
                                       ->first();
 
         if ($contribuyente && Hash::check($request->password, $contribuyente->password)) {
-            Auth::login($contribuyente);
+            Auth::guard('contribuyente')->login($contribuyente);
             return redirect()->intended('/contribuyente/dashboard');
         }
 
@@ -38,7 +43,7 @@ class ContribuyenteAuthController extends Controller
 
     public function logout(Request $request)
     {
-        Auth::logout();
+        Auth::guard('contribuyente')->logout();
         return redirect('/');
     }
 }

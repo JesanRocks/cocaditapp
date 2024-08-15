@@ -10,6 +10,11 @@ use App\Models\Funcionario;
 
 class FuncionarioAuthController extends Controller
 {
+    public function dashboard()
+    {
+        return view('funcionario.dashboard');
+    }
+
     public function showLoginForm()
     {
         return view('auth.funcionario_login');
@@ -23,8 +28,8 @@ class FuncionarioAuthController extends Controller
         ]);
 
         $funcionario = Funcionario::where('correo', $request->login)
-                                  ->orWhere('cedula', $request->login)
-                                  ->first();
+            ->orWhere('cedula', $request->login)
+            ->first();
 
         if ($funcionario && Hash::check($request->password, $funcionario->password)) {
             Auth::guard('funcionario')->login($funcionario);
@@ -42,4 +47,3 @@ class FuncionarioAuthController extends Controller
         return redirect('/funcionario');
     }
 }
-

@@ -17,6 +17,7 @@
                         <div class="center-align show-on-small hide-on-med-and-up">
                             <img src="/img/icon.svg" alt="cocada logo" width="30%" />
                             <span class="card-title center-align">Iniciar Sesión</span>
+                            <h5>Contribuyente</h5> 
                         </div>
                         <div class="center hide-on-small-only show-on-medium-and-up">
                             <i class="material-icons">nature_people</i><br>
