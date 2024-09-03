@@ -6,7 +6,12 @@
 @section('content')
     <div class="card">
         <div class="card-content">
-            <span class="card-title">Pagos Realizados
+            <a href="{{ route('contribuyente.dashboard') }}" class="btn-flat waves-effect waves-light left">
+                Volver
+                <i class="material-icons left">arrow_back</i>
+            </a>
+            <span class="card-title center">Gestión de Pagos
+                
                 <a class="btn waves-effect waves-light right" href="{{ route('pagos.create') }}">
                     Registrar pago
                     <i class="material-icons left">add</i>

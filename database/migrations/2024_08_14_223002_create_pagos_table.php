@@ -14,11 +14,12 @@ return new class extends Migration
     {
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('contribuyente_id'); // Relación con el contribuyente
             $table->decimal('monto', 10, 2);
             $table->string('referencia_pago')->unique();
-            $table->date('fecha_pago');
             $table->unsignedBigInteger('metodo_pago_id');
-            $table->unsignedBigInteger('contribuyente_id'); // Relación con el contribuyente
+            $table->date('fecha_pago');
+            $table->string('comprobante')->nullable(); // Añadir campo para la ruta de la imagen
             $table->timestamps();
 
             // Clave foránea

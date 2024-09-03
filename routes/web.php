@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\ContribuyenteRegisterController;
 use App\Http\Controllers\Auth\FuncionarioAuthController;
 use App\Http\Controllers\Auth\FuncionarioRegisterController;
 use App\Http\Controllers\PagoController;
+use App\Http\Controllers\VehiculoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,6 +28,7 @@ Route::get('/pago', function () {
      return view('welcome');
 });
 
+
 Route::prefix('contribuyente')->group(function () {
     Route::middleware(['redirect_if_authenticated_contribuyente'])->group(function () {
         Route::get('register', [ContribuyenteRegisterController::class, 'showRegistrationForm'])->name('contribuyente.register.form');
@@ -34,17 +36,20 @@ Route::prefix('contribuyente')->group(function () {
         Route::get('/', [ContribuyenteAuthController::class, 'showLoginForm'])->name('contribuyente.login.form');
         Route::post('login', [ContribuyenteAuthController::class, 'login'])->name('contribuyente.login');
     });
-
+    
     Route::post('logout', [ContribuyenteAuthController::class, 'logout'])->name('contribuyente.logout');
     
     Route::middleware(['auth:contribuyente'])->group(function () {
         Route::get('dashboard', [ContribuyenteAuthController::class, 'dashboard'])->name('contribuyente.dashboard');
-
+        
         Route::get('/pagos', [PagoController::class, 'index'])->name('pagos.index');
         Route::get('/pagos/create', [PagoController::class, 'create'])->name('pagos.create');
         Route::post('/pagos', [PagoController::class, 'store'])->name('pagos.store');
         Route::get('/pagos/{pago}', [PagoController::class, 'show'])->name('pagos.show');
+        
+        Route::resource('vehiculos', VehiculoController::class);
     });
+    
 });
 
 Route::prefix('funcionario')->group(function () {

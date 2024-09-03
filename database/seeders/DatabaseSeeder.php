@@ -20,5 +20,9 @@ class DatabaseSeeder extends Seeder
 
         $this->call(FuncionarioSeeder::class);
         $this->call(MetodosPagoSeeder::class);
+
+        $this->call(TipoVehiculoSeeder::class);
+        $this->call(MarcaSeeder::class);
+        $this->call(ColorSeeder::class);
     }
 }

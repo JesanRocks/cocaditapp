@@ -6,9 +6,13 @@
 @section('content')
     <div class="card">
         <div class="card-content">
-            <span class="card-title">Registrar un Nuevo Pago</span>
+            <a href="{{ route('pagos.index') }}" class="btn-flat waves-effect waves-light left">
+                Volver
+                <i class="material-icons left">arrow_back</i>
+            </a>
+            <span class="card-title center">Registrar un Nuevo Pago</span>
 
-            <form action="{{ route('pagos.store') }}" method="POST">
+            <form action="{{ route('pagos.store') }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="input-field">
                     <i class="material-icons prefix">monetization_on</i>
@@ -38,6 +42,17 @@
                     <input type="date" name="fecha_pago" id="fecha_pago" required>
                     <label for="fecha_pago">Fecha de Pago</label>
                 </div>
+
+                <div class="file-field input-field">
+                    <div class="btn">
+                        <span><i class="material-icons left">insert_photo</i> Comprobante</span>
+                        <input type="file" name="comprobante" id="comprobante">
+                    </div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" placeholder="Sube la imagen del comprobante">
+                    </div>
+                </div>
+                
             </div>
             <div class="card-action center">
                 <button type="submit" class="btn waves-effect waves-light">

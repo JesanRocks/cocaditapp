@@ -113,9 +113,9 @@
         <!-- Menú lateral contribuyente-->
         @if (request()->is('contribuyente*'))
             <ul id="slide-out" class="sidenav">
+                <li><a href="{{ route('vehiculos.index') }}"><i class="material-icons">directions_car</i> Vehiculos</a></li>
                 <li><a href="{{ route('pagos.index') }}"><i class="material-icons">payment</i> Pagos</a></li>
                 <li><a href="#!"><i class="material-icons">info</i> Permisos</a></li>
-                <li><a href="#!"><i class="material-icons">directions_car</i> Patentes</a></li>
                 <li><a href="#!"><i class="material-icons">apps</i> Otros</a></li>
             </ul>
         @endif
@@ -147,12 +147,12 @@
                     </p>
                 </div>
                 <div class="col l4 offset-l2 s12">
-                    <h5 class="white-text">Links</h5>
+                    <h5 class="white-text"><i class="fa-solid fa-globe"></i> Redes sociales</h5>
                     <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fa-brands fa-x-twitter"></i> X</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a></li>
                     </ul>
                 </div>
             </div>
@@ -161,12 +161,15 @@
             <div class="container">
                 © 2024 Copyright C.OC.A.D.A. Developed by <b><a class="grey-text text-lighten-2"
                         href="#">@JesanRocks</a></b>
-                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+                <a class="grey-text text-lighten-4 right" href="#!"><i class="fa-solid fa-headset"></i> Soporte</a>
             </div>
         </div>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    {{-- Fontawesome --}}
+    <script src="https://kit.fontawesome.com/b2e0d0a9e6.js" crossorigin="anonymous"></script>
+
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             M.AutoInit();

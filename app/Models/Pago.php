@@ -15,8 +15,9 @@ class Pago extends Model
         'contribuyente_id',
         'monto',
         'referencia_pago',
-        'fecha_pago',
         'metodo_pago_id',
+        'fecha_pago',
+        'comprobante',
     ];
 
     public function contribuyente()
