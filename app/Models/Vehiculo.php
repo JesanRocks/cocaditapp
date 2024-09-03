@@ -19,7 +19,7 @@ class Vehiculo extends Model
         'año',
         'color_id',
         'ejes',
-        'placa',  // Añadir este campo
+        'placa',
         'tipo_uso',
         'valor_fiscal',
         'fecha_registro',
